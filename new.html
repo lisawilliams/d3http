@@ -55,7 +55,7 @@ var xValue = function(d) { return d["MCAS-ELA"];}, // data -> value
 
 // setup y
 var yValue = function(d) { return d["TOTAL-EXP"];}, // data -> value
-    yScale = d3.scale.linear().range([0, height]), // value -> display
+    yScale = d3.scale.linear().range([height, 0]), // value -> display
     yMap = function(d) { return yScale(yValue(d));}, // data -> display
     yAxis = d3.svg.axis().scale(yScale).orient("left")
     console.log(yMap[0])
